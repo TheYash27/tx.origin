@@ -9,6 +9,7 @@ contract Good {
     }
 
     function setOwner(address newOwner) public {
+        //require(tx.origin == owner, "Not owner");
         require(msg.sender == owner, "Not owner");
         owner = newOwner;
     }
